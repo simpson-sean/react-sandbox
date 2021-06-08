@@ -6,29 +6,32 @@ class Header extends Component {
   render() {
     return (
     <div>
-      <div>
-        <header className='header'> 
-          <div>
-            <img src="logo.png" alt="logo"/> 
+      <section class = "logo-place">
+        <div>
+          <header className='header'> 
+            <div class = "head-container">
+              <img src="logo.png" alt="logo" width="35px" height="35px" /> 
+            </div>
+          <div className="logo-container">
+            <h1>Delicious</h1>
+            <h3 className="blog">BEST FOOD BLOG ON THE WEB</h3> 
           </div>
-        <div className="logo">
-          <span>Delicious
-            <p className="blog"> BEST FOOD BLOG ON THE WEB</p> 
+          </header>
+        </div>
+
+        <div className="sm-logos">
+          <span class = "sm-logos-1">
+            <img className="sm-icons" src="fb-icon.png" alt="facebook link"/>
+            <img className="sm-icons" src="twit-icon.png" alt="twitter link"/> 
+            <img className="sm-icons" src="gp-icon.png" alt="google plus link"/> 
+            <img className="sm-icons" src="insta-icon.png" alt="instagram link"/>
+            <img className="sm-icons" src="flic-icon.png" alt="flicker link"/> 
+            <img className="sm-icons" src="pint-icon.png" alt="pintrest link"/> 
+            <img className="sm-icons" src="rss-icon.png" alt="rss link"/> 
+            <img className="sm-icons" src="mail-icon.png" alt="email link"/> 
           </span>
         </div>
-        </header>
-      </div>
-
-      <div className="buttonList"> 
-        <img className="sm-icons" src="fb-icon.png" alt="facebook link"/>
-        <img className="sm-icons" src="twit-icon.png" alt="twitter link"/> 
-        <img className="sm-icons" src="gp-icon.png" alt="google plus link"/> 
-        <img className="sm-icons" src="insta-icon.png" alt="instagram link"/>
-        <img className="sm-icons" src="flic-icon.png" alt="flicker link"/> 
-        <img className="sm-icons" src="pint-icon.png" alt="pintrest link"/> 
-        <img className="sm-icons" src="rss-icon.png" alt="rss link"/> 
-        <img className="sm-icons" src="mail-icon.png" alt="email link"/> 
-      </div>
+      </section>
     </div>
     )
   }
@@ -81,6 +84,17 @@ class ImageSection extends Component {
   }
 }
 
+class IngredientItem extends Component {
+  render() {
+    return (
+      <li>
+        <input type="checkbox"/> {this.props.ammount} {this.props.name}
+      </li>
+    )
+  }
+}
+
+
 class IngredientList extends Component {
   render() {
     return (
@@ -88,20 +102,20 @@ class IngredientList extends Component {
         
         <div className="ingredient-list">
           <ul>
-              <li>1 1/2 cups milk</li>
-              <li>1/2 cup mascarpone</li>
-              <li>1/2 tsp pink salt</li>
-              <li>1 lb Black Mission Figs</li>
-              <li>1/2 cup brown sugar</li>
-              <li>2-4 tbsp water</li>
+              <IngredientItem amount ="1 1/2 Cups" name = "Milk" />
+              <IngredientItem amount = "1/2 Cup" name = "Mascarpone" />
+              <IngredientItem amount = "1/2 tsp" name = "Pink Salt" />
+              <IngredientItem amount = "1 lb" name = "Black Mission Figs" />
+              <IngredientItem amount = "1/2 cup" name = "Brown Sugar" />
+              <IngredientItem amount = "2-4 tbsp" name = "water" />
           </ul>
           <ul>
-              <li>1 1/2 cups heavy cream</li>
-              <li>1/3 granulated sugar</li>
-              <li>2 egg yolks</li>
-              <li>1 lemon, juiced</li>
-              <li>2 tbsp butter</li>
-              <li>1 cup honey roasted pecans, roughly chopped</li>
+              <IngredientItem amount = "1 1/2 cups" name = "heavy cream" />
+              <IngredientItem amount = "1/3 cups" name = "granulated sugar" />
+              <IngredientItem amount = "2" name = "egg yolks" />
+              <IngredientItem amount = "1" name = "lemon, juiced" />
+              <IngredientItem amount = "2 tbsp" name = "butter" />
+              <IngredientItem amount = "1 cup" name =  "honey roasted pecans, roughly chopped" />
           </ul>
       </div>
     
@@ -133,6 +147,10 @@ class Footer extends Component {
     )
   }
 }
+
+
+
+
 
 function App() {
   return (

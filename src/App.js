@@ -49,9 +49,7 @@ class Main extends Component {
         </h6>
       </div>
 
-      <div>
-          <img src="choco-pizza.png" alt="gross pizza" />
-      </div>
+
     
       <article class="content">
           <p>
@@ -77,7 +75,7 @@ class ImageSection extends Component {
   render() {
     return (
       <div>
-        <p>Image Section</p>
+          <img src="choco-pizza.png" alt="gross pizza" />
       </div>
     )
   }
@@ -155,8 +153,8 @@ function App() {
   return (
     <div>
       <Header />
-      <Main />
       <ImageSection />
+      <Main />
       <IngredientList />
       <Footer />
     </div>

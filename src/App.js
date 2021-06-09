@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import { Component } from 'react';
 
@@ -51,7 +50,7 @@ class Main extends Component {
       </div>
 
       <div>
-          <img src="choco-pizza.png" alt="picture of gross" />
+          <img src="choco-pizza.png" alt="gross pizza" />
       </div>
     
       <article class="content">
